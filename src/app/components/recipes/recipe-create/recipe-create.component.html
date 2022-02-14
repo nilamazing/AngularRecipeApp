@@ -1,0 +1,17 @@
+<h2>Recipe Create Component</h2>
+<form (ngSubmit)="createRecipe(f)" #f="ngForm">
+    <mat-form-field>
+        <input required matInput ngModel name="recipeName" placeholder="Recipe Name" #recipeNameInput="ngModel">
+        <mat-error *ngIf="(recipeNameInput.dirty || recipeNameInput.touched) && recipeNameInput.invalid">Please input Recipe Name</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <input cols="3" required matInput ngModel name="recipeDesc" placeholder="Recipe Description" #recipeDescInput="ngModel">
+        <mat-error *ngIf="(recipeDescInput.dirty || recipeDescInput.touched) && recipeDescInput.invalid">Please input Recipe Description</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput required ngModel name="recipeImg" placeholder="Recipe Image Url" #recipeImgInput="ngModel">
+        <mat-error *ngIf="(recipeImgInput.dirty || recipeImgInput.touched) && recipeImgInput.invalid">Please input Recipe Image Url</mat-error>
+    </mat-form-field>
+    <button mat-raised-button type="submit" color="primary">Create Recipe</button>
+    <button mat-raised-button type="button" color="primary" (click)="closeDialog()">Close</button>
+</form>

@@ -1,0 +1,11 @@
+<mat-card *ngIf="recipeDetail">
+    <mat-card-header>
+        <mat-card-title>{{recipeDetail.name}}</mat-card-title>
+    </mat-card-header>
+    <img [src]="recipeDetail.imagePath" alt="recipeDetail.name" width="100px">
+    <mat-card-content>
+        <p>
+            {{recipeDetail.desc}}
+        </p>
+    </mat-card-content>
+</mat-card>

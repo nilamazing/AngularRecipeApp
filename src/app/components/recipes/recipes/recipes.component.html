@@ -1,0 +1,11 @@
+<!-- <mat-list>
+    <mat-list-item>
+        <app-recipe-list [recipes]="recipes"></app-recipe-list>
+    </mat-list-item> -->
+    <!-- <mat-list-item>
+        <app-recipe-detail></app-recipe-detail> -->
+        <!-- <app-recipe-create></app-recipe-create> -->
+    <!-- </mat-list-item> -->
+<!-- </mat-list> -->
+<app-recipe-list [recipes]="recipes" (onRecipeItemDispatch)="checkRecipeItem($event)"></app-recipe-list>
+<app-recipe-detail [recipeDetail]="recipeItemSelected"></app-recipe-detail>

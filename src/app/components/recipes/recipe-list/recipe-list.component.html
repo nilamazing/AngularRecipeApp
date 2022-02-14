@@ -1,0 +1,22 @@
+<!-- <div *ngIf="isDataLoaded"> -->
+<div class="recipeListContainer">
+    <mat-accordion *ngIf="recipes && recipes.length>0">
+        <mat-expansion-panel *ngFor="let recipe of recipes">
+            <mat-expansion-panel-header>
+                <p>{{recipe.name}}</p>
+            </mat-expansion-panel-header>
+            <p>{{recipe.desc}}</p>
+            <mat-action-row>
+                <!-- <button mat-button color="primary" (click)="navigateToBlogDetail(usrDashBoard.id)">Detail</button> -->
+                <button mat-button color="primary" (click)="transmitRecipe(recipe)">Detail</button>
+                <a mat-button color="accent">Edit</a>
+                <button mat-button color="warn">Delete</button>
+            </mat-action-row>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <!-- <mat-toolbar color="accent" *ngIf="userDashboards.length===0"> -->
+    <div class="userMessage" *ngIf="recipes.length===0">
+        <span>There are no Recipes</span>
+    </div>
+    <button mat-raised-button color="primary" (click)="openRecipeDialog()">Create Recipe</button>
+</div>  
