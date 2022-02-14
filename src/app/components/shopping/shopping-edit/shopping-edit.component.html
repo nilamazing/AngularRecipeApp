@@ -1,1 +1,14 @@
-<p>This is Shopping Edit Component</p>
+<div *ngIf="editModeEnabled">
+    <h2>Ingredient Input</h2>
+    <form (ngSubmit)="createIngredient(f)" #f="ngForm">
+        <mat-form-field>
+            <input matInput type="text" required ngModel name="ingredientName" #ingredientName="ngModel" placeholder="Name">
+            <mat-error *ngIf="ingredientName.invalid">Please provide an ingredient name</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="number" required ngModel name="ingredientAmt" #ingredientAmt="ngModel" placeholder="Amount" min="1">
+            <mat-error *ngIf="ingredientAmt.invalid">Please provide an ingredient amount</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" [disabled]="f.invalid">Create</button>
+    </form>
+</div>

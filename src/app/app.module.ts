@@ -13,6 +13,7 @@ import { ShoppingEditComponent } from './components/shopping/shopping-edit/shopp
 import { MaterialModule } from './material.module';
 import { RecipesComponent } from './components/recipes/recipes/recipes.component';
 import { RecipeCreateComponent } from './components/recipes/recipe-create/recipe-create.component';
+import { ShoppingComponent } from './components/shopping/shopping.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { RecipeCreateComponent } from './components/recipes/recipe-create/recipe
     RecipeListComponent,
     RecipeCreateComponent,
     ShoppingListComponent,
+    ShoppingComponent,
     ShoppingEditComponent
   ],
   imports: [

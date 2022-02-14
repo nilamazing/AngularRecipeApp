@@ -25,7 +25,7 @@ export class RecipeListComponent{
             // console.log("The dialog was closed");
             // console.log(data);
             if(data){
-                this.recipes.push({name: data["recipeName"],desc:data["recipeDesc"],imagePath:data["recipeImg"]});
+                this.recipes.push({id:'recipe-' + Math.random().toString(36).substring(2),name: data["recipeName"],desc:data["recipeDesc"],imagePath:data["recipeImg"]});
             }
         })
     }
